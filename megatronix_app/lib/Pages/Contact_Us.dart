@@ -7,12 +7,21 @@ class ContactUsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Contact Us'),
         centerTitle: true,
+        leading: Image.asset(
+          'assets/mega1.png',
+          width: 72,
+          height: 72,
+        ),
       ),
       body: Center(
         child: Container(
           padding: EdgeInsets.all(16.0),
           width: 300, // Adjust the width as needed
           decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/login.png'),
+              fit: BoxFit.cover,
+            ),
             color: Colors.white,
             borderRadius: BorderRadius.circular(16.0),
             boxShadow: [

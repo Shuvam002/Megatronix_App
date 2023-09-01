@@ -4,7 +4,14 @@ class GalleryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(' Megatronix Gallery')),
+      appBar: AppBar(
+        title: Text(' Megatronix Gallery'),
+        leading: Image.asset(
+          'assets/mega1.png',
+          width: 72,
+          height: 72,
+        ),
+      ),
       body: Center(
         child: Container(
           padding: EdgeInsets.all(16.0),

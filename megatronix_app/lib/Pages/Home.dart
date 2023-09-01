@@ -1,103 +1,50 @@
 import 'package:flutter/material.dart';
+import 'package:megatronix_app/Pages/About_Us.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(''),
-        centerTitle: false,
-        leading: Padding(
-          padding: EdgeInsets.only(left: 16.0),
-          child: Image.asset(
-            'assets/logo.png', // Replace with your logo image path
-            width: 40,
-            height: 40,
+        title: Text('Home'),
+        centerTitle: true,
+        leading: Image.asset(
+          'assets/mega1.png',
+          width: 72,
+          height: 72,
+        ),
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/BackgroundHome.jpg'),
+            fit: BoxFit.cover,
           ),
         ),
-        actions: [
-          NavigationBar(),
-        ],
-      ),
-      body: AnimatedText(),
-    );
-  }
-}
-
-class NavigationBar extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children: [
-        NavigationBarItem(text: 'Home', route: '/home'),
-        NavigationBarItem(text: 'About Us', route: '/about'),
-        NavigationBarItem(text: 'Team', route: '/team'),
-        NavigationBarItem(text: 'Event', route: '/event'),
-        NavigationBarItem(text: 'Contact Us', route: '/contact'),
-        NavigationBarItem(text: 'Gallery', route: '/gallery'),
-        NavigationBarItem(text: 'Logout', route: '/logout'),
-      ],
-    );
-  }
-}
-
-class NavigationBarItem extends StatelessWidget {
-  final String text;
-  final String route;
-
-  NavigationBarItem({required this.text, required this.route});
-
-  @override
-  Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: () {
-        Navigator.pushReplacementNamed(context, route);
-      },
-      child: Text(text),
-    );
-  }
-}
-
-class AnimatedText extends StatefulWidget {
-  @override
-  _AnimatedTextState createState() => _AnimatedTextState();
-}
-
-class _AnimatedTextState extends State<AnimatedText> {
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          TweenAnimationBuilder<double>(
-            duration: Duration(seconds: 2),
-            tween: Tween<double>(begin: 0.0, end: 1.0),
-            builder: (context, value, child) {
-              return Opacity(
-                opacity: value,
-                child: child,
-              );
-            },
-            child: Text(
-              'Megatronix',
-              style: TextStyle(
-                fontSize: 36,
-                fontWeight: FontWeight.bold,
-                color: Colors.blue,
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 60),
+              Text(
+                'Megatronix',
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                ),
               ),
-            ),
+              SizedBox(height: 10),
+              Text(
+                'The official Tech Club Of Meghnad Saha Institute Of Technology',
+                textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white),
+              ),
+              SizedBox(height: 50),
+            ],
           ),
-          SizedBox(height: 16),
-          Text(
-            'The Official Tech Club of MSIT',
-            style: TextStyle(
-              fontSize: 18,
-              fontStyle: FontStyle.italic,
-              color: Colors.grey,
-            ),
-          ),
-        ],
+        ),
       ),
     );
   }

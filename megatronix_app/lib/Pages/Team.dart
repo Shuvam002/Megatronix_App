@@ -41,6 +41,11 @@ class TeamPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Team'),
         centerTitle: true,
+        leading: Image.asset(
+          'assets/mega1.png',
+          width: 72,
+          height: 72,
+        ),
       ),
       body: Center(
         child: Container(

@@ -7,6 +7,11 @@ class EventPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Events'),
         centerTitle: true,
+        leading: Image.asset(
+          'assets/mega1.png',
+          width: 72,
+          height: 72,
+        ),
       ),
       body: Center(
         child: Container(
