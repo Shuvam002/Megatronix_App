@@ -25,7 +25,7 @@ class GalleryPage extends StatelessWidget {
               fit: BoxFit.cover,
             ),
             border: Border.all(color: Colors.grey.shade300),
-            borderRadius: BorderRadius.circular(16.0),
+            borderRadius: BorderRadius.circular(2.0),
           ),
           child: GalleryGrid(),
         ),
