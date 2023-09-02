@@ -82,11 +82,11 @@ class _NavigationExampleState extends State<NavigationExample> {
           ),
           NavigationDestination(
             selectedIcon: Icon(
-              Icons.browse_gallery,
+              Icons.picture_in_picture_rounded,
               color: Colors.white,
             ),
             icon: Icon(
-              Icons.browse_gallery_outlined,
+              Icons.picture_in_picture_alt_outlined,
               color: Colors.white,
             ),
             label: 'Gallery',
