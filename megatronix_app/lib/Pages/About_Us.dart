@@ -17,7 +17,7 @@ class AboutUsPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/register.png'),
+            image: AssetImage('assets/bg.jpg'),
             fit: BoxFit.cover,
           ),
         ),

@@ -7,10 +7,14 @@ class EventPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Events'),
         centerTitle: true,
-        leading: Image.asset(
-          'assets/mega1.png',
-          width: 72,
-          height: 72,
+        backgroundColor: Color.fromARGB(255, 215, 12, 70),
+        leading: Transform.scale(
+          scale: 2, // Increase the scale as needed to enlarge the logo
+          child: Image.asset(
+            'assets/mega1.png',
+            width: 72,
+            height: 72,
+          ),
         ),
       ),
       body: Center(
@@ -18,6 +22,10 @@ class EventPage extends StatelessWidget {
           width: double.infinity,
           height: double.infinity,
           decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/bg1.jpg'),
+              fit: BoxFit.cover,
+            ),
             gradient: LinearGradient(
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,

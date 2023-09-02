@@ -6,16 +6,24 @@ class GalleryPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(' Megatronix Gallery'),
-        leading: Image.asset(
-          'assets/mega1.png',
-          width: 72,
-          height: 72,
+        backgroundColor: Color.fromARGB(255, 215, 12, 70),
+        leading: Transform.scale(
+          scale: 2, // Increase the scale as needed to enlarge the logo
+          child: Image.asset(
+            'assets/mega1.png',
+            width: 72,
+            height: 72,
+          ),
         ),
       ),
       body: Center(
         child: Container(
           padding: EdgeInsets.all(16.0),
           decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/bg1.jpg'),
+              fit: BoxFit.cover,
+            ),
             border: Border.all(color: Colors.grey.shade300),
             borderRadius: BorderRadius.circular(16.0),
           ),

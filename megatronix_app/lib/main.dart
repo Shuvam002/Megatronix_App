@@ -33,41 +33,73 @@ class _NavigationExampleState extends State<NavigationExample> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: NavigationBar(
+        backgroundColor: Color.fromARGB(255, 59, 58, 67),
         onDestinationSelected: (int index) {
           setState(() {
             currentPageIndex = index;
           });
         },
-        indicatorColor: Colors.amber[800],
+        indicatorColor: Color.fromARGB(255, 215, 12, 70),
         selectedIndex: currentPageIndex,
         destinations: const <Widget>[
           NavigationDestination(
-            selectedIcon: Icon(Icons.home),
-            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(
+              Icons.home,
+              color: Colors.white,
+            ),
+            icon: Icon(
+              Icons.home_outlined,
+              color: Colors.white,
+            ),
             label: 'Home',
           ),
+          // NavigationDestination(
+          //   selectedIcon: Icon(Icons.search),
+          //   icon: Icon(Icons.search_outlined),
+          //   label: 'About Us',
+          // ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.search),
-            icon: Icon(Icons.search_outlined),
-            label: 'About Us',
-          ),
-          NavigationDestination(
-            icon: Icon(Icons.event),
+            selectedIcon: Icon(
+              Icons.event,
+              color: Colors.white,
+            ),
+            icon: Icon(
+              Icons.event_available_outlined,
+              color: Colors.white,
+            ),
             label: 'Event',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.contact_page),
-            icon: Icon(Icons.contact_page_outlined),
+            selectedIcon: Icon(
+              Icons.contact_page,
+              color: Colors.white,
+            ),
+            icon: Icon(
+              Icons.contact_page_outlined,
+              color: Colors.white,
+            ),
             label: 'Contact Us',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.browse_gallery),
-            icon: Icon(Icons.browse_gallery_outlined),
+            selectedIcon: Icon(
+              Icons.browse_gallery,
+              color: Colors.white,
+            ),
+            icon: Icon(
+              Icons.browse_gallery_outlined,
+              color: Colors.white,
+            ),
             label: 'Gallery',
           ),
           NavigationDestination(
-            selectedIcon: Icon(Icons.group),
-            icon: Icon(Icons.group_add_outlined),
+            selectedIcon: Icon(
+              Icons.group,
+              color: Colors.white,
+            ),
+            icon: Icon(
+              Icons.group_add_outlined,
+              color: Colors.white,
+            ),
             label: 'Team',
           ),
         ],
@@ -78,11 +110,11 @@ class _NavigationExampleState extends State<NavigationExample> {
           alignment: Alignment.center,
           child: HomePage(),
         ),
-        Container(
-          color: Colors.red,
-          alignment: Alignment.center,
-          child: AboutUsPage(),
-        ),
+        // Container(
+        //   color: Colors.red,
+        //   alignment: Alignment.center,
+        //   child: AboutUsPage(),
+        // ),
         Container(
           color: Colors.green,
           alignment: Alignment.center,

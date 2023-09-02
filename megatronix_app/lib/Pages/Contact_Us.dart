@@ -7,10 +7,15 @@ class ContactUsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Contact Us'),
         centerTitle: true,
-        leading: Image.asset(
-          'assets/mega1.png',
-          width: 72,
-          height: 72,
+        backgroundColor:
+            Color.fromARGB(255, 215, 12, 70), //Color.fromARGB(255, 135, 1, 1),
+        leading: Transform.scale(
+          scale: 2, // Increase the scale as needed to enlarge the logo
+          child: Image.asset(
+            'assets/mega1.png',
+            width: 72,
+            height: 72,
+          ),
         ),
       ),
       body: Center(
@@ -19,7 +24,7 @@ class ContactUsPage extends StatelessWidget {
           width: 300, // Adjust the width as needed
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/login.png'),
+              image: AssetImage('assets/bg4.jpg'),
               fit: BoxFit.cover,
             ),
             color: Colors.white,
@@ -41,12 +46,16 @@ class ContactUsPage extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
+                  color: Colors.white,
                 ),
               ),
               SizedBox(height: 16.0),
               Text(
                 'Feel free to reach out to us for any inquiries or feedback. We\'re here to help!',
-                style: TextStyle(fontSize: 16.0),
+                style: TextStyle(
+                  fontSize: 16.0,
+                  color: Colors.white,
+                ),
               ),
               SizedBox(height: 16.0),
               ContactButton(
