@@ -7,10 +7,9 @@ class ContactUsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Contact Us'),
         centerTitle: true,
-        backgroundColor:
-            Color.fromARGB(255, 215, 12, 70), //Color.fromARGB(255, 135, 1, 1),
+        backgroundColor: Color.fromARGB(255, 215, 12, 70),
         leading: Transform.scale(
-          scale: 2, // Increase the scale as needed to enlarge the logo
+          scale: 2,
           child: Image.asset(
             'assets/mega1.png',
             width: 72,
@@ -18,62 +17,66 @@ class ContactUsPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-        child: Container(
-          padding: EdgeInsets.all(16.0),
-          width: 300, // Adjust the width as needed
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('assets/bg4.jpg'),
-              fit: BoxFit.cover,
-            ),
-            color: Colors.white,
-            borderRadius: BorderRadius.circular(16.0),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.shade300,
-                blurRadius: 5.0,
-                spreadRadius: 2.0,
-              ),
-            ],
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage('assets/bg4.jpg'),
+            fit: BoxFit.cover, // Make the background image responsive
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Get in Touch',
-                style: TextStyle(
-                  fontSize: 24.0,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(2.0),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.shade300,
+              blurRadius: 5.0,
+              spreadRadius: 2.0,
+            ),
+          ],
+        ),
+        child: Center(
+          child: Container(
+            padding: EdgeInsets.all(16.0),
+            width: double.infinity, // Make the container take the full width
+            color: Color.fromRGBO(
+                0, 0, 0, 0.5), // Add a semi-transparent black background
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Get in Touch',
+                  style: TextStyle(
+                    fontSize: 24.0,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              SizedBox(height: 16.0),
-              Text(
-                'Feel free to reach out to us for any inquiries or feedback. We\'re here to help!',
-                style: TextStyle(
-                  fontSize: 16.0,
-                  color: Colors.white,
+                SizedBox(height: 16.0),
+                Text(
+                  'Feel free to reach out to us for any inquiries or feedback. We\'re here to help!',
+                  style: TextStyle(
+                    fontSize: 16.0,
+                    color: Colors.white,
+                  ),
                 ),
-              ),
-              SizedBox(height: 16.0),
-              ContactButton(
-                icon: Icons.email,
-                label: 'Email Us',
-                onPressed: () {
-                  // Implement email action
-                },
-              ),
-              SizedBox(height: 16.0),
-              ContactButton(
-                icon: Icons.phone,
-                label: 'Call Us',
-                onPressed: () {
-                  // Implement call action
-                },
-              ),
-            ],
+                SizedBox(height: 16.0),
+                ContactButton(
+                  icon: Icons.email,
+                  label: 'Email Us',
+                  onPressed: () {
+                    // Implement email action
+                  },
+                ),
+                SizedBox(height: 16.0),
+                ContactButton(
+                  icon: Icons.phone,
+                  label: 'Call Us',
+                  onPressed: () {
+                    // Implement call action
+                  },
+                ),
+              ],
+            ),
           ),
         ),
       ),
